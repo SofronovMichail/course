@@ -190,6 +190,23 @@ li {
 .item-title {
   font-size: 20px;
   margin: 10px 0;
+  width: 100%;
+  display: inline;
+}
+.title-elem {
+  font-size: 32px;
+  font-weight: normal;
+  color: red;
+  width: 20px;
+  height: 20px;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.item-title .title-elem :hover {
+  background-color: red;
 }
 .item-about {
   margin-left: 10px;
@@ -228,4 +245,15 @@ li {
 }
 .back_to_top--show {
   display: block;
+}
+
+details summary {
+  display: block;
+  width: fit-content;
+  outline-style: none;
+  cursor: pointer;
+  width: 100%;
+}
+details summary::-webkit-details-marker {
+  display: none;
 }

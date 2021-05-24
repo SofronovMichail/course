@@ -280,7 +280,7 @@ li {
   justify-content: space-around;
 }
 .footer-menu_item {
-  padding: 5px 10px;
+  padding: 10px 10px;
   font-size: 16px;
 }
 .footer-menu_item:hover {
@@ -437,11 +437,50 @@ form input:focus {
   }
 }
 @media screen and (max-width: 800px) {
+  .services-title {
+    font-size: 30px;
+  }
   .services-container {
     width: 400px;
   }
   .item-form {
-    width: 500px;
+    width: 90%;
     text-align: center;
+  }
+  .prices-text {
+    width: 90%;
+  }
+  .prices-items {
+    width: 90%;
+  }
+  .footer-menu {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .container {
+    width: 520px;
+  }
+  .icons {
+    display: none;
+  }
+  .header-menu {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .form-header {
+    height: 150px;
+  }
+  .form-header .top-title_text {
+    font-size: 40px;
+  }
+  .header-paralax {
+    display: none;
+  }
+  .modal .modal-content {
+    width: 75%;
+  }
+  .back_to_top {
+    display: none;
   }
 }

@@ -1,14 +1,14 @@
 @font-face {
   font-family: 'Neuron';
-  src: url(/fonts/Neuron.ttf);
+  src: url(../fonts/Neuron.ttf);
 }
 @font-face {
   font-family: 'Facon';
-  src: url(/fonts/facon.otf);
+  src: url(../fonts/facon.otf);
 }
 @font-face {
   font-family: 'carboned';
-  src: url(/fonts/CARboned.otf);
+  src: url(../fonts/CARboned.otf);
 }
 * {
   margin: 0;
@@ -69,6 +69,8 @@ a:visited {
 .header-menu {
   width: 500px;
   margin: 20px auto;
+  display: flex;
+  justify-content: center;
 }
 .header-menu a:link,
 .header-menu a:visited {
@@ -84,7 +86,7 @@ a:visited {
   padding: 5px 20px;
 }
 .header-paralax {
-  background-image: url('/img/accord_back.jpg');
+  background-image: url('../img/accord_back.jpg');
   min-height: 500px;
   background-attachment: fixed;
   background-position: center;
@@ -134,7 +136,7 @@ a:visited {
   color: red;
 }
 .services-container {
-  width: 90%;
+  width: 1000px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -232,15 +234,18 @@ li {
   font-size: 22px;
   margin: 40px auto;
 }
+.content-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .form-title {
-  text-align: center;
   margin: 40px auto;
   font-size: 40px;
   color: red;
 }
 .item-form {
   width: 700px;
-  text-align: center;
   font-size: 22px;
   margin: 40px auto;
 }
@@ -248,15 +253,19 @@ li {
   display: flex;
   justify-content: center;
 }
-.btn {
+#btn {
   background-color: white;
   font-size: 30px;
   border: 3px solid red;
   border-radius: 20px;
   padding: 8px 40px;
   cursor: pointer;
+  margin: 0 auto;
 }
-.btn-form :hover {
+#btn:hover {
+  background-color: red;
+}
+.active {
   background-color: red;
 }
 .footer {
@@ -273,6 +282,9 @@ li {
 .footer-menu_item {
   padding: 5px 10px;
   font-size: 16px;
+}
+.footer-menu_item:hover {
+  color: red;
 }
 /* up button */
 .back_to_top {
@@ -311,15 +323,125 @@ details div {
   overflow: hidden;
   padding: 1em 1em 0;
 }
-.prices-item details[open] div {
-  animation: spoiler 1.5s;
-}
-@keyframes spoiler {
-  0% {
-    max-height: 0;
-  }
 
-  100% {
-    max-height: 60em;
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+.modal .modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 0;
+  width: 60%;
+  z-index: 99999;
+}
+.modal .modal-content .close-modal-window {
+  color: red;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-bottom: 40px;
+}
+.close {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+/* styles form */
+.form-header {
+  height: 250px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.modal-content {
+  text-align: center;
+}
+form h2 {
+  font-size: 48px;
+}
+.please {
+  margin-bottom: 40px;
+}
+.form-title-text {
+  font-size: 30px;
+}
+.form-text {
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 15px;
+  font-size: 30px;
+  padding: 2px 10px;
+  text-align: center;
+  margin: 10px 0;
+}
+form input:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+.name {
+  width: 200px;
+}
+.email {
+  width: 340px;
+}
+.tel {
+  width: 240px;
+}
+#btn-submit {
+  font-size: 30px;
+  margin: 40px 0;
+  background-color: white;
+  border: 2px solid red;
+  border-radius: 20px;
+  padding: 5px 20px;
+}
+#btn-submit:hover {
+  background-color: red;
+  color: black;
+}
+.contact-map {
+  height: 530px;
+}
+@media screen and (max-width: 1200px) {
+  .icons {
+    margin-left: 100px;
+  }
+  .top-title-time {
+    margin-right: 60px;
+  }
+  .services-container {
+    width: 800px;
+  }
+}
+@media screen and (max-width: 940px) {
+  .icons {
+    margin-left: 50px;
+  }
+  .top-title_text {
+    flex-grow: 0;
+    margin: 0 auto;
+  }
+  .top-title-time {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .services-container {
+    width: 400px;
+  }
+  .item-form {
+    width: 500px;
+    text-align: center;
   }
 }

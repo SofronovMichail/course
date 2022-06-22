@@ -10,12 +10,19 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Panel</title>
   <link rel="stylesheet" href="/public/css/adminpanel.css">
-  <script>sessionStorage.setItem("userKey", "<? echo $_SESSION['key']; ?>")</script>
 </head>
 
 <body>
   <div id="main">
     <h1>Admin Panel</h1>
+    <div class="services-btn">
+      <button class="btn-item btn-nav" @click="goToTint">Тонировка</button>
+      <button class="btn-item btn-nav" @click="goToProtect">Бронирование</button>
+      <button class="btn-item btn-nav" @click="goToClean">Химчистка</button>
+      <button class="btn-item btn-nav" @click="goToPolish">Полировка</button>
+      <button class="btn-item btn-nav" @click="goToSound">Шумоизоляция</button>
+      <button class="btn-item btn-nav" @click="goToVinyl">Автовинил</button>
+    </div>
     <table class="services-panel">
       <tr>
         <th>Наименование услуги</th>

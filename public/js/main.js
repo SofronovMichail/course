@@ -149,6 +149,24 @@ const main = new Vue({
 				});
 			this.getAllServices();
 		},
+		goToTint: function () {
+			window.location.href = '/admin/tinting';
+		},
+		goToProtect: function () {
+			window.location.href = '/admin/protecting';
+		},
+		goToClean: function () {
+			window.location.href = '/admin/cleaning';
+		},
+		goToPolish: function () {
+			window.location.href = '/admin/polishing';
+		},
+		goToSound: function () {
+			window.location.href = '/admin/soundproofing';
+		},
+		goToVinyl: function () {
+			window.location.href = '/admin/vinyl';
+		},
 	},
 	mounted() {
 		this.getAllServices();

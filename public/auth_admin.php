@@ -7,6 +7,11 @@ $password = $_POST['password'];
 $key = '';
 $d = new DateTime();
 
+$key = md5(md5($login . $password));
+if ($_SESSION['key'] && $_SESSION['key'] == $key) {
+    header('Location: ../public/admin_panel.php');
+}
+
 if ($type != 'GET_KEY') {
     $req = $conn->query("SELECT `password`, `role` FROM users WHERE `login` = '$login' LIMIT 1");
     if ($req) {

@@ -12,6 +12,24 @@ switch ($request) {
     case '/admin':
         require __DIR__ . '/public/admin.php';
         break;
+    case '/admin/tinting':
+        require __DIR__ . '/public/adminpanel/tinting.php';
+        break;
+    case '/admin/protecting':
+        require __DIR__ . '/public/adminpanel/protecting.php';
+        break;
+    case '/admin/cleaning':
+        require __DIR__ . '/public/adminpanel/cleaning.php';
+        break;
+    case '/admin/polishing':
+        require __DIR__ . '/public/adminpanel/polishing.php';
+        break;
+    case '/admin/soundproofing':
+        require __DIR__ . '/public/adminpanel/soundproofing.php';
+        break;
+    case '/admin/vinyl':
+        require __DIR__ . '/public/adminpanel/vinyl.php';
+        break;
     case '/tinting':
         require __DIR__ . '/public/services/tinting.php';
         break;

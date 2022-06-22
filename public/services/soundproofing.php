@@ -89,7 +89,7 @@ session_start();
         <div class="footer-menu">
           <a v-for="item in footerMenu" class="footer-menu_item" :href="item.menuHref">{{item.menuTitle}}</a>
         </div>
-        <div class="footer-text">© 2021 Детейлинг центр DETAIL52 </div>
+        <div class="footer-text">© 2022 Детейлинг центр DETAIL52 </div>
       </div>
     </div>
     <?
